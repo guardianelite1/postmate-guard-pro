@@ -74,18 +74,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-y border-border bg-secondary/30">
-        <div className="container mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary">{s.value}</div>
-              <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Services */}
       <section id="services" className="py-20 md:py-28">
         <div className="container mx-auto px-4">
