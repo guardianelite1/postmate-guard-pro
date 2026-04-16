@@ -27,7 +27,7 @@ const Index = () => {
         <nav className="container mx-auto flex items-center justify-between h-16 px-4">
           <a href="#home" className="flex items-center gap-2">
             <Shield className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg text-primary">Sentinel Advisory</span>
+            <span className="font-bold text-lg text-primary">Guardian Elite</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
@@ -119,7 +119,7 @@ const Index = () => {
             <span className="text-accent-gold text-sm font-semibold tracking-wider uppercase">About Us</span>
             <h2 className="text-3xl md:text-5xl mt-3 mb-6">Experience You Can Trust</h2>
             <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
-              Sentinel Advisory brings together former law enforcement, military, and corporate security leaders with decades of combined frontline experience.
+              Guardian Elite Security Services brings together former law enforcement, military, and corporate security leaders with decades of combined frontline experience.
             </p>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
               We don't sell hardware. We don't push products. We provide independent, vendor-neutral guidance designed to protect your people, assets, and reputation.
@@ -187,7 +187,7 @@ const Index = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent-gold" />
-                <span>contact@sentineladvisory.com</span>
+                <span>contact@guardianelitesecurity.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-accent-gold" />
@@ -232,9 +232,9 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-2">
             <Shield className="h-5 w-5 text-accent-gold" />
-            <span className="font-semibold text-primary-foreground">Sentinel Advisory</span>
+            <span className="font-semibold text-primary-foreground">Guardian Elite Security Services</span>
           </div>
-          <p>© {new Date().getFullYear()} Sentinel Advisory. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Guardian Elite Security Services. All rights reserved.</p>
         </div>
       </footer>
     </div>
