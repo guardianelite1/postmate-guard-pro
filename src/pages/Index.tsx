@@ -13,7 +13,7 @@ const services = [
 ];
 
 const stats = [
-  { value: "25+", label: "Years Experience" },
+  { value: "15+", label: "Years Experience" },
   { value: "400+", label: "Clients Protected" },
   { value: "30+", label: "Countries Served" },
   { value: "24/7", label: "Advisory Support" },
