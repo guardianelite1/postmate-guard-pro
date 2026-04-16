@@ -183,7 +183,7 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-accent-gold" />
-                <span>Global offices · Headquartered in New York</span>
+                <span>Global offices · Headquartered in Florida</span>
               </div>
             </div>
           </div>
