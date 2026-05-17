@@ -150,7 +150,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { num: "01", title: "Discretion", desc: "Every engagement is handled with the utmost confidentiality and professionalism." },
-              { num: "02", title: "Expertise", desc: "Our advisors have led security operations for Fortune 500s, governments, and private clients." },
+              { num: "02", title: "Expertise", desc: "Our advisors have led security operations for private clients." },
               { num: "03", title: "Results", desc: "Practical, actionable recommendations — not theoretical reports that sit on a shelf." },
             ].map((b) => (
               <div key={b.num} className="border-l-2 border-accent-gold pl-6">
