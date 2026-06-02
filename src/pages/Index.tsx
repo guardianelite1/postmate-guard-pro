@@ -200,7 +200,7 @@ const Index = () => {
           </div>
           <Card className="bg-background text-foreground">
             <CardContent className="p-6 md:p-8">
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Thank you — we'll be in touch shortly."); }}>
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-1.5 block">Full Name</label>
@@ -214,6 +214,20 @@ const Index = () => {
                 <div>
                   <label className="text-sm font-medium mb-1.5 block">Email</label>
                   <input type="email" required className="w-full h-10 px-3 rounded-md border border-input bg-background" />
+                </div>
+                <div>
+                  <label className="text-sm font-medium mb-1.5 block">What type of advisory do you need?</label>
+                  <select
+                    required
+                    value={advisoryType}
+                    onChange={(e) => setAdvisoryType(e.target.value)}
+                    className="w-full h-10 px-3 rounded-md border border-input bg-background"
+                  >
+                    <option value="" disabled>Select an option</option>
+                    <option value="hoa-board">HOA & Board Advisory</option>
+                    <option value="vendor-contract">Vendor Contract Oversight</option>
+                    <option value="risk-assessment">Property Risk Assessment</option>
+                  </select>
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-1.5 block">How can we help?</label>
