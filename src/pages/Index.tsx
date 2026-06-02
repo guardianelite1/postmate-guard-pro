@@ -54,13 +54,13 @@ const Index = () => {
         <div className="container relative mx-auto px-4 py-24 text-primary-foreground">
           <div className="max-w-3xl">
             <span className="inline-block px-3 py-1 rounded-full border border-accent-gold/40 text-accent-gold text-xs font-medium tracking-wider uppercase mb-6">
-              Trusted Security Advisory
+              Strategic Risk & Operational Consulting
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Protecting What Matters Most
+              Optimizing Property Protection & Asset Resilience
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/85 mb-8 max-w-2xl">
-              Strategic security consulting for businesses, executives, and institutions. We turn risk into resilience with expertise refined over decades in the field.
+              Independent administrative risk consulting, physical vulnerability audits, and vendor contract oversight for community associations and commercial properties. We deliver unbiased, data-driven strategies backed by 14 years of professional industry experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="bg-accent-gold text-accent-gold-foreground hover:bg-accent-gold/90">
@@ -223,6 +223,11 @@ const Index = () => {
             <span className="font-semibold text-primary-foreground">Guardian Elite Security Services</span>
           </div>
           <p>© {new Date().getFullYear()} Guardian Elite Security Services. All rights reserved.</p>
+        </div>
+        <div className="container mx-auto px-4 pb-6 text-center">
+          <p className="text-xs text-primary-foreground/50 max-w-3xl mx-auto">
+            <strong>Notice:</strong> Guardian Elite operates strictly as an independent management and administrative consultancy. We provide unbiased risk assessments, structural design reviews, and vendor performance audits. Guardian Elite does not provide direct physical guard placement, active patrols, or protective law enforcement services.
+          </p>
         </div>
       </footer>
     </div>
