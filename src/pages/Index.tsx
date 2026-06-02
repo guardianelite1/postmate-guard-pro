@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Lock, Eye, FileSearch, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-security.jpg";
+import { useState } from "react";
 
 const services = [
   { icon: Shield, title: "Risk Assessments", desc: "Physical Vulnerability Audits. On-site physical evaluations mapping property boundaries, structural access weak points, and perimeter lighting thresholds." },
@@ -18,6 +19,21 @@ const stats = [
 ];
 
 const Index = () => {
+  const [advisoryType, setAdvisoryType] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    let message = "Thank you — we'll be in touch shortly.";
+    if (advisoryType === "hoa-board") {
+      message = "Thank you! A board advisory specialist will contact you within one business day to discuss your community's governance and risk framework.";
+    } else if (advisoryType === "vendor-contract") {
+      message = "Thank you! Our vendor oversight team will reach out to review your third-party contracts and performance metrics.";
+    } else if (advisoryType === "risk-assessment") {
+      message = "Thank you! A senior risk advisor will contact you to schedule your property vulnerability audit and assessment walkthrough.";
+    }
+    alert(message);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
