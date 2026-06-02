@@ -1,15 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Lock, Eye, FileSearch, Users, AlertTriangle, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
+import { Shield, Lock, Eye, FileSearch, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-security.jpg";
 
 const services = [
-  { icon: Shield, title: "Risk Assessment", desc: "Comprehensive evaluation of physical and operational vulnerabilities across your organization." },
-  { icon: Eye, title: "Surveillance Strategy", desc: "Design and audit of CCTV, access control, and monitoring systems tailored to your environment." },
-  { icon: FileSearch, title: "Security Audits", desc: "Independent reviews of policies, procedures, and compliance with industry standards." },
-  { icon: Users, title: "Personnel Training", desc: "Training programs for security staff, executives, and employees on threat awareness and response." },
-  { icon: AlertTriangle, title: "Crisis Response Planning", desc: "Emergency protocols, business continuity, and incident response frameworks." },
-  { icon: Lock, title: "Executive Protection Advisory", desc: "Strategic guidance for high-profile individuals and corporate leadership protection programs." },
+  { icon: Shield, title: "Risk Assessments", desc: "Physical Vulnerability Audits. On-site physical evaluations mapping property boundaries, structural access weak points, and perimeter lighting thresholds." },
+  { icon: Eye, title: "Surveillance Strategy", desc: "System Architecture & Design. Technical advisory and placement design for smart access control gates, CCTV hardware layout, and asset monitoring networks." },
+  { icon: FileSearch, title: "Security Audits", desc: "Vendor Contract Compliance. Deep-dive administrative reviews of active third-party guard agency contracts to ensure billing precision, performance optimization, and KPI delivery." },
+  { icon: Lock, title: "HOA & Board Advisory", desc: "Independent consults and executive threat briefing sessions designed for community boards, master-planned associations, and property managers." },
 ];
 
 const stats = [
@@ -79,9 +77,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center mb-14">
             <span className="text-accent-gold text-sm font-semibold tracking-wider uppercase">Our Services</span>
-            <h2 className="text-3xl md:text-5xl mt-3 mb-4">Comprehensive Security Solutions</h2>
+            <h2 className="text-3xl md:text-5xl mt-3 mb-4">Strategic Advisory Disciplines</h2>
             <p className="text-muted-foreground text-lg">
-              From risk assessments to crisis response, we deliver tailored advisory services that meet the highest standards.
+              Unbiased, administrative risk analysis and compliance auditing engineered to optimize your property's asset protection.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -107,17 +105,14 @@ const Index = () => {
             <span className="text-accent-gold text-sm font-semibold tracking-wider uppercase">About Us</span>
             <h2 className="text-3xl md:text-5xl mt-3 mb-6">Experience You Can Trust</h2>
             <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
-              Guardian Elite Security Services brings together former law enforcement, military, and corporate security leaders with decades of combined frontline experience.
-            </p>
-            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              We don't sell hardware. We don't push products. We provide independent, vendor-neutral guidance designed to protect your people, assets, and reputation.
+              Guardian Elite brings together 14 years of professional industry experience, focusing strictly on high-level corporate risk advisory and physical asset analysis. We don't sell hardware, and we don't deploy guards. We provide completely unbiased, independent risk counseling tailored to protect community assets, streamline third-party vendor performance, and mitigate operational liability.
             </p>
             <ul className="space-y-3">
               {[
-                "Independent, vendor-neutral expertise",
-                "Confidential and discreet engagements",
-                "Customized strategies, not templates",
-                "Global reach with local insight",
+                "Independent, Unbiased Risk Analysis",
+                "Comprehensive Property & Asset Audits",
+                "Third-Party Vendor Contract Oversight",
+                "Formulated for HOA & Property Managers",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-accent-gold flex-shrink-0 mt-0.5" />
@@ -150,7 +145,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { num: "01", title: "Discretion", desc: "Every engagement is handled with the utmost confidentiality and professionalism." },
-              { num: "02", title: "Expertise", desc: "Our advisors have led security operations for private clients." },
+              { num: "02", title: "Strategic Asset Defense", desc: "Our advisory methods focus purely on systemic security design, administrative policy auditing, and robust liability mitigation." },
               { num: "03", title: "Results", desc: "Practical, actionable recommendations — not theoretical reports that sit on a shelf." },
             ].map((b) => (
               <div key={b.num} className="border-l-2 border-accent-gold pl-6">
@@ -168,7 +163,7 @@ const Index = () => {
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12">
           <div>
             <span className="text-accent-gold text-sm font-semibold tracking-wider uppercase">Get in Touch</span>
-            <h2 className="text-3xl md:text-5xl mt-3 mb-6">Ready to Strengthen Your Security?</h2>
+            <h2 className="text-3xl md:text-5xl mt-3 mb-6">Schedule an Advisory Briefing</h2>
             <p className="text-primary-foreground/85 text-lg mb-8">
               Schedule a confidential consultation with one of our senior advisors. We respond within one business day.
             </p>
@@ -208,7 +203,7 @@ const Index = () => {
                   <label className="text-sm font-medium mb-1.5 block">How can we help?</label>
                   <textarea rows={4} required className="w-full px-3 py-2 rounded-md border border-input bg-background" />
                 </div>
-                <Button type="submit" size="lg" className="w-full">Request Consultation</Button>
+                <Button type="submit" size="lg" className="w-full">Book 15-Minute Discovery Call</Button>
               </form>
             </CardContent>
           </Card>
