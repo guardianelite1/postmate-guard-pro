@@ -190,7 +190,7 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-accent-gold" />
-                <span>+1 (555) 010-2025</span>
+                <span>+1 (407) 434-9782</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-accent-gold" />
