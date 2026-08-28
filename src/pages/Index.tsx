@@ -197,6 +197,12 @@ const Index = () => {
                 <span>Global offices · Headquartered in Florida</span>
               </div>
             </div>
+            <Button asChild size="lg" className="mt-8 bg-accent-gold text-accent-gold-foreground hover:bg-accent-gold/90">
+              <a href="tel:+14074349782">
+                <Phone className="h-4 w-4 mr-2" />
+                Call Now
+              </a>
+            </Button>
           </div>
           <Card className="bg-background text-foreground">
             <CardContent className="p-6 md:p-8">
@@ -247,7 +253,15 @@ const Index = () => {
             <Shield className="h-5 w-5 text-accent-gold" />
             <span className="font-semibold text-primary-foreground">Guardian Elite Security Services</span>
           </div>
-          <p>© {new Date().getFullYear()} Guardian Elite Security Services. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <Button asChild size="sm" variant="outline" className="border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-accent-gold-foreground">
+              <a href="tel:+14074349782">
+                <Phone className="h-4 w-4 mr-2" />
+                Call +1 (407) 434-9782
+              </a>
+            </Button>
+            <p>© {new Date().getFullYear()} Guardian Elite Security Services. All rights reserved.</p>
+          </div>
         </div>
         <div className="container mx-auto px-4 pb-6 text-center">
           <p className="text-xs text-primary-foreground/50 max-w-3xl mx-auto">
