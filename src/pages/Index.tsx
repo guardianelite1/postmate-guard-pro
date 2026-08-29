@@ -24,7 +24,7 @@ const Index = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-  const form = e.current target"
+  const form = e.currentTarget;
   const formData = new FormData(e.currentTarget);
   const name = formData.get("name") as string;
   const company = formData.get("company") as string;
