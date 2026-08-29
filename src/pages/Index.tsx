@@ -22,7 +22,7 @@ const stats = [
 const Index = () => {
   const [advisoryType, setAdvisoryType] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let message = "Thank you — we'll be in touch shortly.";
     if (advisoryType === "hoa-board") {
@@ -32,7 +32,9 @@ const Index = () => {
     } else if (advisoryType === "risk-assessment") {
       message = "Thank you! A senior risk advisor will contact you to schedule your property vulnerability audit and assessment walkthrough.";
     }
-    alert(message);
+    toast({ title: "Request received", description: message });
+    e.currentTarget.reset();
+    setAdvisoryType("");
   };
 
   return (
