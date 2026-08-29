@@ -1,3 +1,4 @@
+import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Lock, Eye, FileSearch, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
