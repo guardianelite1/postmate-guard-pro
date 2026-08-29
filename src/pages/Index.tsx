@@ -56,7 +56,7 @@ const Index = () => {
     if (!response.ok) throw new Error("Failed to send");
 
     toast({ title: "Request received", description: successMessage });
-    e.form.reset();
+    form.reset();
     setAdvisoryType("");
   } catch (error) {
     console.error("Form submission error:", error);
