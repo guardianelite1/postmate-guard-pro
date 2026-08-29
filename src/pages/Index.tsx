@@ -24,7 +24,7 @@ const Index = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-
+  const form = e.current target"
   const formData = new FormData(e.currentTarget);
   const name = formData.get("name") as string;
   const company = formData.get("company") as string;
@@ -56,7 +56,7 @@ const Index = () => {
     if (!response.ok) throw new Error("Failed to send");
 
     toast({ title: "Request received", description: successMessage });
-    e.currentTarget.reset();
+    e.form.reset();
     setAdvisoryType("");
   } catch (error) {
     console.error("Form submission error:", error);
