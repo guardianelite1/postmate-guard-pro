@@ -42,7 +42,7 @@ const Index = () => {
 
   try {
     const response = await fetch(
-      "https://ewcwhhwdnfvowfozkrkc.supabase.co/functions/v1/send-contact-email",
+      "https://ewcwhhwdnfvowfozkrkc.supabase.co/functions/v1/smart-api",
       {
         method: "POST",
         headers: {
