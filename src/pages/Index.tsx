@@ -59,9 +59,10 @@ const Index = () => {
     e.currentTarget.reset();
     setAdvisoryType("");
   } catch (error) {
+    console.error("Form submission error:", error);
     toast({
       title: "Something went wrong",
-      description: "Please try again or email us directly.",
+      description: `Error: ${error instanceof Error ? error.message : "Unknown error"}`,
       variant: "destructive",
     });
   }
