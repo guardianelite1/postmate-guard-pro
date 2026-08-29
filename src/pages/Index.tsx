@@ -22,20 +22,51 @@ const stats = [
 const Index = () => {
   const [advisoryType, setAdvisoryType] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    let message = "Thank you — we'll be in touch shortly.";
-    if (advisoryType === "hoa-board") {
-      message = "Thank you! A board advisory specialist will contact you within one business day to discuss your community's governance and risk framework.";
-    } else if (advisoryType === "vendor-contract") {
-      message = "Thank you! Our vendor oversight team will reach out to review your third-party contracts and performance metrics.";
-    } else if (advisoryType === "risk-assessment") {
-      message = "Thank you! A senior risk advisor will contact you to schedule your property vulnerability audit and assessment walkthrough.";
-    }
-    toast({ title: "Request received", description: message });
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.currentTarget);
+  const name = formData.get("name") as string;
+  const company = formData.get("company") as string;
+  const email = formData.get("email") as string;
+  const message = formData.get("message") as string;
+
+  let successMessage = "Thank you — we'll be in touch shortly.";
+  if (advisoryType === "hoa-board") {
+    successMessage = "Thank you! A board advisory specialist will contact you within one business day.";
+  } else if (advisoryType === "vendor-contract") {
+    successMessage = "Thank you! Our vendor oversight team will reach out to review your third-party agreements.";
+  } else if (advisoryType === "risk-assessment") {
+    successMessage = "Thank you! A senior risk advisor will contact you to schedule your property assessment.";
+  }
+
+  try {
+    const response = await fetch(
+      "https://ewcwhhwdnfvowfozkrkc.supabase.co/functions/v1/send-contact-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer sb_publishable_OX0lFjhF8kwOxSFVVtHFBA_vJjmCYXB`,
+        },
+        body: JSON.stringify({ name, company, email, advisoryType, message }),
+      }
+    );
+
+    if (!response.ok) throw new Error("Failed to send");
+
+    toast({ title: "Request received", description: successMessage });
     e.currentTarget.reset();
     setAdvisoryType("");
-  };
+  } catch (error) {
+    toast({
+      title: "Something went wrong",
+      description: "Please try again or email us directly.",
+      variant: "destructive",
+    });
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -213,16 +244,16 @@ const Index = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-1.5 block">Full Name</label>
-                    <input required className="w-full h-10 px-3 rounded-md border border-input bg-background" />
+                    <input required name="name" className="w-full h-10 px-3 rounded-md border border-input bg-background" />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-1.5 block">Company</label>
-                    <input className="w-full h-10 px-3 rounded-md border border-input bg-background" />
+                    <input name="company" className="w-full h-10 px-3 rounded-md border border-input bg-background" />
                   </div>
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-1.5 block">Email</label>
-                  <input type="email" required className="w-full h-10 px-3 rounded-md border border-input bg-background" />
+                  <input type="email" required name="email" className="w-full h-10 px-3 rounded-md border border-input bg-background" />
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-1.5 block">What type of advisory do you need?</label>
@@ -240,7 +271,7 @@ const Index = () => {
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-1.5 block">How can we help?</label>
-                  <textarea rows={4} required className="w-full px-3 py-2 rounded-md border border-input bg-background" />
+                  <textarea rows={4} required name="message" className="w-full px-3 py-2 rounded-md border border-input bg-background" />
                 </div>
                 <Button type="submit" size="lg" className="w-full">Book 15-Minute Discovery Call</Button>
               </form>
