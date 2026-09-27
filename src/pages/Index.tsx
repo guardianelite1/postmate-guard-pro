@@ -1,7 +1,7 @@
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Lock, Eye, FileSearch, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
+import { Shield, Lock, Eye, FileSearch, CheckCircle2, Mail, Phone, MapPin, Facebook, Instagram, Share2 } from "lucide-react";
 import heroImage from "@/assets/hero-security.jpg";
 import { useState } from "react";
 
@@ -18,6 +18,43 @@ const stats = [
   { value: "30+", label: "Countries Served" },
   { value: "24/7", label: "Advisory Support" },
 ];
+
+const socialLinks = [
+  { icon: Facebook, label: "Guardian Elite on Facebook", href: "https://www.facebook.com/share/1FFrUWLMmM/" },
+  { icon: Instagram, label: "Guardian Elite on Instagram", href: "https://www.instagram.com/guardianelitefl" },
+];
+
+const FloatingSocial = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5">
+      {socialLinks.map(({ icon: Icon, label, href }) => (
+        <a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          className={`inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-primary shadow-[var(--shadow-card)] transition-all duration-300 ease-out hover:border-accent-gold hover:text-accent-gold ${
+            open ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-90 translate-y-1 pointer-events-none"
+          }`}
+        >
+          <Icon className="h-5 w-5" strokeWidth={1.5} />
+        </a>
+      ))}
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-label={open ? "Close social links" : "Follow Guardian Elite"}
+        aria-expanded={open}
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent-gold/40 bg-primary text-accent-gold shadow-[var(--shadow-elegant)] transition-all duration-300 ease-out hover:border-accent-gold hover:scale-105"
+      >
+        <Share2 className="h-5 w-5" strokeWidth={1.5} />
+      </button>
+    </div>
+  );
+};
 
 const Index = () => {
   const [advisoryType, setAdvisoryType] = useState("");
@@ -281,7 +318,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Floating follow button */}
+      <FloatingSocial />
+
       {/* Footer */}
+
       <footer className="bg-primary text-primary-foreground/70 border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-2">
@@ -296,6 +337,28 @@ const Index = () => {
               </a>
             </Button>
             <p>© {new Date().getFullYear()} Guardian Elite Security Services. All rights reserved.</p>
+          </div>
+        </div>
+        {/* Social */}
+        <div className="container mx-auto px-4 pt-2 pb-8">
+          <div className="flex flex-col items-center gap-4 border-t border-primary-foreground/10 pt-8">
+            <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground/50">
+              Follow Guardian Elite
+            </span>
+            <div className="flex items-center gap-4">
+              {socialLinks.map(({ icon: Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-primary-foreground/25 text-primary-foreground/80 transition-all duration-300 ease-out hover:border-accent-gold hover:text-accent-gold hover:scale-105"
+                >
+                  <Icon className="h-6 w-6" strokeWidth={1.5} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
         <div className="container mx-auto px-4 pb-6 text-center">
