@@ -5,3 +5,4 @@
 - [ ] Verify navigation, social links, form behavior, responsive layouts, images, and console health
 - [ ] Preserve the existing deep navy, gold, and white brand palette without recoloring or altering the logo
 - [ ] Keep backend, database, form, API, integration, analytics, and existing behavior unchanged
+- [ ] Use premium executive typography: refined authoritative display headlines with a clean modern sans-serif for navigation and body text
