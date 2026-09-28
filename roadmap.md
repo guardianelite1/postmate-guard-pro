@@ -7,3 +7,5 @@
 - [ ] Keep backend, database, form, API, integration, analytics, and existing behavior unchanged
 - [ ] Use premium executive typography: refined authoritative display headlines with a clean modern sans-serif for navigation and body text
 - [ ] Use Info@guardianelitefl.com as the verified contact email throughout the homepage and footer
+- [ ] Replace all preview/sample content with approved Guardian Elite homepage copy only
+- [ ] Do not add unverified testimonials, credentials, statistics, partnerships, guarantees, or claims
