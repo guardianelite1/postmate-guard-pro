@@ -36,9 +36,9 @@
     --input: 215 20% 88%;
     --ring: 215 60% 18%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(215 60% 12% / 0.92), hsl(215 70% 8% / 0.75));
+    --gradient-hero: linear-gradient(90deg, hsl(215 62% 10% / 0.97) 0%, hsl(215 62% 10% / 0.88) 46%, hsl(215 62% 10% / 0.28) 82%);
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --shadow-elegant: 0 20px 50px -20px hsl(215 60% 18% / 0.25);
     --shadow-card: 0 4px 20px -8px hsl(215 60% 18% / 0.15);
@@ -84,9 +84,49 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   h1, h2, h3, h4 {
-    @apply font-semibold tracking-tight;
+    letter-spacing: 0;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+
+  .hero-overlay {
+    background: var(--gradient-hero);
+  }
+
+  .section-label {
+    @apply mb-3 text-sm font-semibold uppercase text-accent-gold;
+    letter-spacing: 0;
+  }
+
+  .section-title {
+    @apply font-display text-4xl font-semibold leading-tight text-primary md:text-5xl;
+    letter-spacing: 0;
+  }
+
+  .form-control {
+    @apply h-11 w-full rounded-md border border-input bg-background px-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/20;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-overlay {
+    background: linear-gradient(180deg, hsl(215 62% 10% / 0.68) 0%, hsl(215 62% 10% / 0.96) 60%, hsl(215 62% 10% / 0.99) 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
