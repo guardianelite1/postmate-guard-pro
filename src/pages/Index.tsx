@@ -24,6 +24,10 @@ import logoAsset from "@/assets/guardian-elite-official-logo.png.asset.json";
 import heroImage from "@/assets/guardian-consulting-hero.jpg";
 import planningImage from "@/assets/risk-planning-meeting.jpg";
 
+const logoUrl = import.meta.env.DEV
+  ? `https://id-preview--e9b6a8b2-8d2b-44a4-90db-afb2076c5156.lovable.app${logoAsset.url}`
+  : logoAsset.url;
+
 const navigation = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -180,7 +184,7 @@ const Index = () => {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/10 bg-primary/95 text-primary-foreground backdrop-blur-md">
         <nav className="container mx-auto flex h-20 items-center justify-between px-4" aria-label="Main navigation">
           <a href="#home" className="shrink-0" aria-label="Guardian Elite home">
-            <img src={logoAsset.url} alt="Guardian Elite Risk & Advisory Services" width={1710} height={920} className="h-auto w-40 object-contain md:w-48" />
+            <img src={logoUrl} alt="Guardian Elite Risk & Advisory Services" width={1710} height={920} className="h-14 w-auto object-contain md:h-16" />
           </a>
 
           <div className="hidden items-center gap-5 lg:flex">
@@ -236,7 +240,7 @@ const Index = () => {
           <div className="hero-overlay absolute inset-0" />
           <div className="container relative mx-auto px-4 pb-16 pt-24 md:pb-20 md:pt-32">
             <div className="max-w-4xl">
-              <img src={logoAsset.url} alt="Guardian Elite Risk & Advisory Services" width={1710} height={920} className="mb-7 h-auto w-56 object-contain sm:w-72" />
+              <img src={logoUrl} alt="Guardian Elite Risk & Advisory Services" width={1710} height={920} className="mb-7 hidden h-auto w-72 object-contain sm:block" />
               <p className="mb-5 text-sm font-semibold uppercase text-accent-gold">Security Consulting &amp; Risk Management</p>
               <h1 className="max-w-4xl font-display text-4xl font-semibold leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl">
                 Identify Vulnerabilities.<br />Understand Your Risks.<br />Make Informed Security Decisions.
@@ -433,7 +437,7 @@ const Index = () => {
       <footer className="border-t border-primary-foreground/10 bg-primary text-primary-foreground">
         <div className="container mx-auto grid gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.9fr_1fr]">
           <div>
-            <img src={logoAsset.url} alt="Guardian Elite Risk & Advisory Services" width={1710} height={920} className="h-auto w-60 object-contain" />
+            <img src={logoUrl} alt="Guardian Elite Risk & Advisory Services" loading="lazy" width={1710} height={920} className="h-auto w-60 object-contain" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/65">Security Consulting &amp; Risk Management for organizations, properties, communities, and decision-makers.</p>
           </div>
           <div>
