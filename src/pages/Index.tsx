@@ -20,13 +20,10 @@ import {
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import logoAsset from "@/assets/guardian-elite-official-logo.png.asset.json";
 import heroImage from "@/assets/guardian-consulting-hero.jpg";
 import planningImage from "@/assets/risk-planning-meeting.jpg";
 
-const logoUrl = import.meta.env.DEV
-  ? `https://id-preview--e9b6a8b2-8d2b-44a4-90db-afb2076c5156.lovable.app${logoAsset.url}`
-  : logoAsset.url;
+const logoUrl = "/guardian-elite-logo.png";
 
 const navigation = [
   { label: "Home", href: "#home" },
