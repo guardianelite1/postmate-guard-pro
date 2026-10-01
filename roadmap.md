@@ -9,4 +9,4 @@
 - [x] Use Info@guardianelitefl.com as the verified contact email throughout the homepage and footer
 - [x] Replace all preview/sample content with approved Guardian Elite homepage copy only
 - [x] Do not add unverified testimonials, credentials, statistics, partnerships, guarantees, or claims
-- [ ] Tighten only the existing hero spacing and responsive headline sizing so its core content fits within the first desktop and mobile viewport
+- [x] Tighten only the existing hero spacing and responsive headline sizing so its core content fits within the first desktop and mobile viewport
