@@ -232,20 +232,20 @@ const Index = () => {
       </header>
 
       <main>
-        <section id="home" className="hero-section relative flex min-h-[92vh] items-end pt-20 text-primary-foreground">
+        <section id="home" className="hero-section relative flex min-h-[100svh] items-end pt-20 text-primary-foreground">
           <img src={heroImage} alt="Security consultant evaluating a commercial property's access points" width={1920} height={1200} className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="hero-overlay absolute inset-0" />
-          <div className="container relative mx-auto px-4 pb-16 pt-24 md:pb-20 md:pt-32">
+          <div className="container relative mx-auto px-4 pb-8 pt-8 md:pb-10 md:pt-10">
             <div className="max-w-4xl">
-              <img src={logoUrl} alt="Guardian Elite Risk & Advisory Services" width={1710} height={920} className="mb-7 hidden h-auto w-72 object-contain sm:block" />
-              <p className="mb-5 text-sm font-semibold uppercase text-accent-gold">Security Consulting &amp; Risk Management</p>
-              <h1 className="max-w-4xl font-display text-4xl font-semibold leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl">
+              <img src={logoUrl} alt="Guardian Elite Risk & Advisory Services" width={1710} height={920} className="mb-5 hidden h-auto w-72 object-contain sm:block" />
+              <p className="mb-3 text-sm font-semibold uppercase text-accent-gold">Security Consulting &amp; Risk Management</p>
+              <h1 className="max-w-4xl font-display text-4xl font-semibold leading-[1.02] sm:text-5xl md:text-5xl lg:text-6xl">
                 Identify Vulnerabilities.<br />Understand Your Risks.<br />Make Informed Security Decisions.
               </h1>
-              <p className="mt-7 max-w-2xl text-base leading-relaxed text-primary-foreground/80 md:text-lg">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/80 md:text-lg">
                 Guardian Elite provides professional security consulting and risk advisory services designed to help businesses, properties, and organizations identify vulnerabilities, strengthen their security posture, and make informed decisions.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button size="lg" asChild className="bg-accent-gold text-accent-gold-foreground hover:bg-accent-gold/90">
                   <a href="#contact">Request a Security Consultation <ArrowRight className="ml-2 h-4 w-4" /></a>
                 </Button>
